@@ -1,0 +1,237 @@
+/* Marquee Testimonials Section */
+.marquee-testimonials-section {
+  background: #000000;
+  padding: 5rem 1rem;
+  overflow: hidden;
+}
+
+.marquee-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.marquee-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.marquee-title {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.marquee-description {
+  font-size: 1rem;
+  color: #9ca3af;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Marquee Wrapper */
+.marquee-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  overflow: hidden;
+}
+
+.marquee-fade-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8rem;
+  background: linear-gradient(to bottom, #000000 0%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.marquee-fade-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8rem;
+  background: linear-gradient(to top, #000000 0%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Grid Layout */
+.marquee-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  height: 600px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .marquee-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .marquee-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Marquee Columns */
+.marquee-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.marquee-column-2 {
+  display: none;
+}
+
+.marquee-column-3 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .marquee-column-2 {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .marquee-column-3 {
+    display: flex;
+  }
+}
+
+/* Scroll Animations */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll-up-1 {
+  animation: scrollUp 25s linear infinite;
+}
+
+.animate-scroll-up-2 {
+  animation: scrollUp 30s linear infinite;
+}
+
+.animate-scroll-up-3 {
+  animation: scrollUp 20s linear infinite;
+}
+
+/* Pause on hover */
+.marquee-column:hover {
+  animation-play-state: paused;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.testimonial-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.1);
+}
+
+/* Quote Icon */
+.quote-icon {
+  margin-bottom: 1.25rem;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  font-size: 0.9375rem;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+}
+
+/* Author Section */
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  object-fit: cover;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.author-name {
+  font-size: 0.875rem;
+  color: #e5e7eb;
+  font-weight: 500;
+  margin: 0;
+}
+
+.author-company {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .marquee-testimonials-section {
+    padding: 4rem 1rem;
+  }
+
+  .marquee-title {
+    font-size: 2.25rem;
+  }
+
+  .marquee-description {
+    font-size: 0.9375rem;
+  }
+
+  .marquee-grid {
+    height: 500px;
+  }
+}
+
+@media (max-width: 640px) {
+  .marquee-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 1.25rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.875rem;
+  }
+}

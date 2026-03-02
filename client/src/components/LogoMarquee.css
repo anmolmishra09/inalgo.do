@@ -1,0 +1,180 @@
+/* Logo Marquee Section */
+.logo-marquee-section {
+  background: #000000;
+  padding: 4rem 1rem;
+  overflow: hidden;
+}
+
+.logo-marquee-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.logo-marquee-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.logo-marquee-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-marquee-subtitle {
+  font-size: 1rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Marquee Wrapper */
+.logo-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Fade Overlays */
+.logo-marquee-fade-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(to right, #000000 0%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.logo-marquee-fade-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(to left, #000000 0%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .logo-marquee-fade-left,
+  .logo-marquee-fade-right {
+    width: 150px;
+  }
+}
+
+/* Marquee Track */
+.logo-marquee-track {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Marquee Content */
+.logo-marquee-content {
+  display: flex;
+  animation: marqueeScroll 30s linear infinite;
+  will-change: transform;
+}
+
+/* Pause animation on hover */
+.logo-marquee-wrapper:hover .logo-marquee-content {
+  animation-play-state: paused;
+}
+
+/* Marquee Animation */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Logo Item */
+.logo-marquee-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  min-width: 150px;
+  height: 80px;
+}
+
+.logo-marquee-image {
+  max-width: 120px;
+  max-height: 50px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0) invert(1) opacity(0.5);
+  transition: all 0.3s ease;
+}
+
+.logo-marquee-item:hover .logo-marquee-image {
+  filter: grayscale(0%) brightness(1) invert(0) opacity(1);
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo-marquee-section {
+    padding: 3rem 1rem;
+  }
+
+  .logo-marquee-header {
+    margin-bottom: 2rem;
+  }
+
+  .logo-marquee-title {
+    font-size: 1.75rem;
+  }
+
+  .logo-marquee-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .logo-marquee-item {
+    padding: 0 1.5rem;
+    min-width: 120px;
+    height: 60px;
+  }
+
+  .logo-marquee-image {
+    max-width: 100px;
+    max-height: 40px;
+  }
+
+  .logo-marquee-content {
+    animation-duration: 25s;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo-marquee-title {
+    font-size: 1.5rem;
+  }
+
+  .logo-marquee-item {
+    padding: 0 1rem;
+    min-width: 100px;
+  }
+
+  .logo-marquee-image {
+    max-width: 80px;
+    max-height: 35px;
+  }
+
+  .logo-marquee-content {
+    animation-duration: 20s;
+  }
+}
