@@ -202,11 +202,7 @@ function HubVisualization() {
           })}
         </div>
 
-        <div className="hub-footer">
-          <p className="hub-footer-text">
-            Click on any service to learn more about our offerings
-          </p>
-        </div>
+       
       </div>
     </section>
   );

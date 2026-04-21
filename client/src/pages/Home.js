@@ -52,9 +52,7 @@ function Home() {
       {/* Features Section */}
       <section className="features">
         <div className="features-header">
-          <GlassBorderButton variant="purple" className="features-badge-wrapper">
-            Features
-          </GlassBorderButton>
+         
           <h2 className="features-main-title">AI Agents That Automate and Accelerate Growth.</h2>
           <p className="features-description">Streamline operations, boost productivity, and scale effortlessly - all powered by intelligent automation.</p>
         </div>

@@ -373,6 +373,13 @@
     text-align: left;
   }
 
+  .founder-img {
+  width: 280px;   /* increased */
+  height: 280px;  /* increased */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e5e7eb;
+}
   .founder-social {
     justify-content: flex-start;
   }
