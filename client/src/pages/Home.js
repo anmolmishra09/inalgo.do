@@ -16,32 +16,80 @@ import LogoMarquee from '../components/LogoMarquee';
 function Home() {
   return (
     <div className="home">
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="container">
-          <div className="hero-content">
-            <h1 className="hero-title">
-              Think It. Type It. <span className="hero-highlight-orange">Launch It.</span>
-            </h1>
+     {/* Hero Section */}
+<section className="hero">
+  
+  {/* Background Video */}
+  <video
+    className="hero-video"
+    autoPlay
+    loop
+    muted
+    playsInline
+    poster="//images.ctfassets.net/un655fb9wln6/1lNzwYsBP3p2rpTZe6ijqn/bb4bcbf22b29d6a812968fa02e640ac8/poster.png"
+  >
+    <source
+      src="//videos.ctfassets.net/un655fb9wln6/7eNjBmqlO8eOOCdZn0MepT/fbb0a51e2da909d3c8e38771fd6fae6b/Homepage-hero-video.mp4"
+      type='video/mp4; codecs="hvc1"'
+    />
+    <source
+      src="//videos.ctfassets.net/un655fb9wln6/3wNElEdBiFdK2eauJB7wMp/4112a64b3b6e6a4d1b3c997e9bad2984/Homepage-hero-video.webm"
+      type="video/webm"
+    />
+  </video>
 
-            <p className="hero-subtitle">
-              Software Solution - Simplify challenges, maximize results, and <span className="hero-highlight-underline">stay ahead</span> in the competitive market.
-            </p>
+  {/* Dark Overlay */}
+  <div className="hero-overlay"></div>
 
-            <div className="hero-buttons">
-              <GlassBorderButton variant="purple">
-                <a href="https://transcript-ai-8.preview.emergentagent.com/" style={{ textDecoration: 'none', color: 'inherit' }}>Get Started</a>
-              </GlassBorderButton>
-              <a href="#portfolio" className="btn-secondary">
-                <span>Learn More</span>
-                <svg className="btn-arrow" width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.25.5 4.75 4l-3.5 3.5" stroke="currentColor" strokeOpacity=".4" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="container">
+    <div className="hero-content">
+      <h1 className="hero-title">
+        Think It. Type It.{" "}
+        <span className="hero-highlight-orange">
+          Launch It.
+        </span>
+      </h1>
+
+      <p className="hero-subtitle">
+        Software Solution - Simplify challenges, maximize results,
+        and <span className="hero-highlight-underline">
+        stay ahead
+        </span> in the competitive market.
+      </p>
+
+      <div className="hero-buttons">
+        <GlassBorderButton variant="purple">
+          <a
+            href="https://transcript-ai-8.preview.emergentagent.com/"
+            style={{ textDecoration:"none", color:"inherit" }}
+          >
+            Get Started
+          </a>
+        </GlassBorderButton>
+
+        <a href="ama" className="btn-secondary">
+          <span>Learn More</span>
+
+          <svg
+            className="btn-arrow"
+            width="6"
+            height="8"
+            viewBox="0 0 6 8"
+            fill="none"
+          >
+            <path
+              d="M1.25.5 4.75 4l-3.5 3.5"
+              stroke="currentColor"
+              strokeOpacity=".4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Hub Visualization */}
       <HubVisualization />
