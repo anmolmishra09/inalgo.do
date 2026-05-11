@@ -259,7 +259,7 @@ alt="Adarsh Mishra - CTO"
       <div className="founder-image-wrapper">
         <div className="founder-avatar">
           <img 
-            src="https://media.licdn.com/dms/image/v2/D5603AQFu1lnVyRqtqw/profile-displayphoto-scale_400_400/B56Zxx9ptKIcAg-/0/1771438514908?e=1778112000&v=beta&t=GyG600RqhSOsxa8wTnMVPG4KnpC5STtVsNnPK37Ssjc"
+            srchttps://media.licdn.com/dms/image/v2/D5603AQFu1lnVyRqtqw/profile-displayphoto-crop_800_800/B56Zxx9ptKIcAI-/0/1771438514815?e=1779926400&v=beta&t=GNimoUiCOEEzAIWes_B2dn_nizgt8PCI1GIddkGz6WE"
             alt="Adarsh Mishra - CTO"
             className="founder-img"
           />
