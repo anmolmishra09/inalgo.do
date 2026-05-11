@@ -154,7 +154,7 @@ function About() {
       <div className="founder-image-wrapper">
         <div className="founder-avatar">
           <img 
-src="https://media.licdn.com/dms/image/v2/D5603AQE08OG9IJtAJw/profile-displayphoto-scale_400_400/B56Z0RO3x1JMAg-/0/1774110609883?e=1778112000&v=beta&t=8iP5NM-za55nvJ0qQe-exGz6cvDnPKruSUwZmEYDbHI"
+src="https://media.licdn.com/dms/image/v2/D5603AQE08OG9IJtAJw/profile-displayphoto-crop_800_800/B56Z0RO3x1JMAI-/0/1774110609795?e=1779926400&v=beta&t=1CMuvr8WVrBbV5C-Y2ncm57k6UVCv6xx3XhapasjL08"
 alt="Adarsh Mishra - CTO"
             className="founder-img"
           />
